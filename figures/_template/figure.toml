@@ -1,0 +1,32 @@
+# Template manifest: canvas/layout geometry + figure-specific selection knobs.
+# Copy this folder to start a new figure; edit the values below.
+# See specs/CODE_SPECIFICATION.md for the full rules.
+#
+# This file is CONFIG ONLY. It declares geometry and what to select (which sizes,
+# which runs, which example cases) — never what the data means or where it came
+# from. Provenance is human prose in README.md / CAPTION.md / audits.
+
+[canvas]
+# Width defaults to the shared house width (figkit.style.FIGURE_WIDTH) so every figure
+# is authored at one width; do not set a width here. Height is derived from the layout.
+height = "auto"
+
+[layout]
+rows = 1
+cols = 1
+panel_aspect = 1.33  # panel_width / panel_height, about 4:3 (the framework default)
+
+# Any knob below that departs from its default needs a sibling <knob>_reason saying
+# why; config.load refuses the manifest otherwise. Example:
+#
+# wspace_in = 0.90
+# wspace_in_reason = "panel b's colorbar label needs more than the 0.60 default"
+
+# ---- Selection knobs (read by extract_data.py, not by the plotter) ----
+# A file-per-run series is selected with config.resolve_runs. `sizes` is an explicit
+# list or "auto"; `runs` is a count (runs 0..N-1) or "auto". Prefer an explicit count:
+# it is the declared expectation, so extract_data.py can warn when fewer are found.
+#
+# [panel_b.phykan]
+# sizes = [3, 4, 5, 6, 7, 8]
+# runs  = 10

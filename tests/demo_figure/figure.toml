@@ -1,0 +1,21 @@
+# Demo/test figure — NOT a manuscript figure.
+#
+# Synthetic seeded distributions only; exists to exercise and regression-test
+# figkit end to end (manifest geometry, run selection, band statistics,
+# smoothing, colorbar, subgrids, panel letters). make_figure.py measures the
+# rendered axes afterwards and asserts they equal the inches declared here.
+
+[layout]
+rows = 3       # row 3 is one full-width schematic panel (g) spanning all columns
+cols = 3
+wspace_in = 1.0
+wspace_in_reason = "panel e's colorbar label and panel f's y-axis label share the same inter-column gap, so it needs more than the 0.60 default (also exercises the reasoned-knob validation)"
+
+# Panel a — per-run .npy file series, selected through config.resolve_runs like
+# the real figures. The files are generated (seeded) by make_figure.py itself.
+[panel_a.wide]
+sizes = "auto"
+runs = "auto"
+[panel_a.narrow]
+sizes = "auto"
+runs = "auto"

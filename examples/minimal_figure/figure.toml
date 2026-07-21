@@ -1,0 +1,20 @@
+# Minimal example figure — the smallest complete manifest.
+#
+# Config only: geometry, plus (in a real figure) the knobs saying which sizes/runs
+# to select. Nothing here describes what the data means; that is prose in README.md.
+
+[canvas]
+# No width: it defaults to the shared house width (figkit.style.FIGURE_WIDTH), so
+# every figure in the paper is authored at one width. Height is derived from the
+# layout below, so a one-row figure is exactly as tall as it needs to be.
+height = "auto"
+
+[layout]
+rows = 1
+cols = 1
+panel_aspect = 2.4
+panel_aspect_reason = "one panel spanning the full house width would be far too tall at the 4:3 default; a single-panel figure wants a wide, short frame"
+
+# Every knob that departs from its default needs a sibling <knob>_reason, as above.
+# config.load refuses the manifest otherwise — that refusal is the point: it keeps
+# the house geometry the default and makes each departure a recorded decision.

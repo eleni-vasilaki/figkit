@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Matplotlib cache (created at repo root by figkit.bootstrap)
+.mplconfig/
+
+# Raw data convention: bundles stay local, figures build from committed tables
+/raw_data/
