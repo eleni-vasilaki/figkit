@@ -12,7 +12,9 @@ then CHECKS itself two ways:
 Run it after editing figkit; read the printed PASS/FAIL lines and look at the
 output PNG. Any FAIL exits non-zero.
 
-  conda run -n myml python tests/demo_figure/make_figure.py
+  python tests/demo_figure/make_figure.py
+
+(any Python >= 3.11 environment with numpy, scipy, and matplotlib)
 
 Panels (each exercises one figkit feature):
   a  mean +- std bands vs size, log-x      — config.resolve_runs over generated

@@ -4,8 +4,11 @@ A starting point to copy: one panel, one committed table, a mean ± std band. It
 to show the shape of a figure with nothing else in the way.
 
 ```bash
-conda run -n myml python examples/minimal_figure/make_figure.py
+python examples/minimal_figure/make_figure.py
 ```
+
+Any Python ≥ 3.11 environment with numpy, scipy, and matplotlib will do —
+see the Requirements in the repository README.
 
 The data are **synthetic and seeded**. This is a framework example, not a scientific
 result, and nothing here should be cited or reused as one.

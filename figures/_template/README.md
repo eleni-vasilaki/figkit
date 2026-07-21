@@ -10,10 +10,11 @@ under `audits/` are where provenance lives — in prose, written by a person.
 
 ## Current Command
 
-From the repository root:
+From the repository root, in a Python ≥ 3.11 environment with numpy, scipy,
+and matplotlib:
 
 ```bash
-conda run -n myml python figures/figure_<name>/make_figure.py
+python figures/figure_<name>/make_figure.py
 ```
 
 `make_figure.py` is a pure plotter: it reads only the committed `extracted_data/*.tsv`
@@ -26,8 +27,11 @@ rebuild them from the raw bundle in the repo-root `raw_data/<bundle>/` (kept loc
 gitignored), run:
 
 ```bash
-conda run -n myml python figures/figure_<name>/extract_data.py
+python figures/figure_<name>/extract_data.py
 ```
+
+The same environment, plus whatever your extractor itself imports (for example
+torch, if it opens saved models).
 
 ## Folder Layout
 

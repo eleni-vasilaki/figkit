@@ -5,8 +5,11 @@ for two reasons: it regression-tests `figkit` end to end, and it is the fullest 
 example of the framework in one file.
 
 ```bash
-conda run -n myml python tests/demo_figure/make_figure.py
+python tests/demo_figure/make_figure.py
 ```
+
+Run it in a Python ≥ 3.11 environment with numpy, scipy, and matplotlib
+installed — the Requirements in the repository README.
 
 Every check prints `PASS` or `FAIL`, and any `FAIL` exits non-zero. Run it after editing
 `figkit`, and look at `outputs/demo_figure.png` as well as the printed lines.

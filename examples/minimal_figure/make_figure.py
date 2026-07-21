@@ -5,7 +5,9 @@ This is the starting point to copy. It shows the whole shape of a figure in one
 screenful — manifest, committed table, derived statistics, exact-size save — with
 nothing else in the way. Run it:
 
-    conda run -n myml python examples/minimal_figure/make_figure.py
+    python examples/minimal_figure/make_figure.py
+
+(any Python >= 3.11 environment with numpy, scipy, and matplotlib)
 
 Then read tests/demo_figure/README.md for everything this leaves out (subgrids,
 schematics, colorbars, run selection over per-run files, geometry assertions).
