@@ -70,3 +70,5 @@ code. Any call that departs from the house layout — a grid override, a non-uni
 subgrid, a shifted panel letter, a moved frame — must say why with a `reason=`, and
 the framework refuses the call otherwise. `specs/CODE_SPECIFICATION.md` holds the
 full house rules; `specs/scientific_coding_principles.md` the principles behind them.
+
+Developed jointly with Claude and Codex.
